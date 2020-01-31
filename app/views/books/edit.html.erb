@@ -1,1 +1,2 @@
-<h1><%= @book.title %></h1>
+<h1>Edit Book</h1>
+<%= render partial: 'form', locals: { book: @book, author: @author, url: author_book_path(@author, @book) } %>

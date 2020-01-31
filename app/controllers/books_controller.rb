@@ -28,13 +28,26 @@ before_action :set_book, only: [:show, :edit, :update, :destroy]
 
     end
 
+    def update
+        if @book.update(book_params)
+            redirect_to author_book_path(@author, @book)
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+        @book.destroy 
+        redirect_to author_books_path(@author)
+    end
+
  private
 
     def set_book
         unless @book = Book.find_by_id(params[:id])
             redirect_to author_books_path(@author)
         end
-        end
+    end
 
     def set_author
         unless @author = Author.find_by_id(params[:author_id])

@@ -1,9 +1,2 @@
 <h1>Create New Book</h1>
-
-<%= form_for(@book, url: author_books_path(@author)) do |f| %>
-<p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %><br>
-</p>
-    <%= f.submit %>
-    <% end %>
+<%= render partial: 'form', locals: { book: @book, author: @author, url: @path } %>
