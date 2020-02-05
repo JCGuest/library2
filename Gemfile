@@ -45,3 +45,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "pry", "~> 0.12.2", :groups => [:development, :test]
 
 gem "faker", "~> 2.10", :groups => [:development, :test]
+
+gem "omniauth-github", "~> 1.3"
+
+gem "omniauth", "~> 1.9"
+
+gem "dotenv-rails", "~> 2.7"
